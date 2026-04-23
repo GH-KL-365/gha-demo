@@ -1,0 +1,28 @@
+name: Serial WF Execution
+on: workflow_dispatch
+jobs:
+  BuildJob:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Build Step
+        run: |
+         echo "Starting Build"
+         echo "Completed Build"
+  BuildTestJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Test
+        run: |
+          echo "Starting Build"
+          echo "Completed Build"
+
+  DeploymentJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment Step
+        run: |
+         echo "Starting Deployment Job"
+         echo "Completed Deployment Job"
+
+    
+  
