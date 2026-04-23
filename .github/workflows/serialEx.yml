@@ -10,6 +10,7 @@ jobs:
          echo "Completed Build"
   BuildTestJob:
     runs-on: ubuntu-latest
+    needs: BuildJob
     steps:
       - name: Build Test
         run: |
@@ -18,6 +19,7 @@ jobs:
 
   DeploymentJob:
     runs-on: ubuntu-latest
+    needs: BuildTestJob
     steps:
       - name: Deployment Step
         run: |
