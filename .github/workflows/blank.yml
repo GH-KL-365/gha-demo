@@ -1,0 +1,29 @@
+name: Multi Command Wf
+on: workflow_dispatch
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Build Step
+         run: |
+           echo "Performing Build Step"
+           echo "Build Startd"
+           echo "Build Completed"
+
+   BuildTest:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Build Test
+         run: |
+           echo "Performing Build Tests"
+           echo "Build Tests Started"
+           echo "Build Tests Completed"
+
+    Deployment:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Deployment Step
+          run: |
+           echo "Deployment started"
+           echo "Deployment Completed"
+          
