@@ -1,5 +1,5 @@
-name: Serial WF Execution
-on: workflow_dispatch
+name: Serial WF Execution Push
+on: push
 jobs:
   BuildJob:
     runs-on: ubuntu-latest
