@@ -1,5 +1,14 @@
-name: Serial WF Execution Push
-on: push
+
+name: Serial WF Execution Pull Request
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      - 'feature/*'
+  
 jobs:
   BuildJob:
     runs-on: ubuntu-latest
