@@ -1,0 +1,12 @@
+name: Outputs Demo
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step One
+        id: Step1_ID
+        run: echo "version=0.0.10"
+      - name: Step Two
+        id: Step2_ID
+        run: echo " The version is ${{ steps.Step1_ID }}"
